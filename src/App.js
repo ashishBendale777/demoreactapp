@@ -10,6 +10,8 @@ import Home from './compo/Home';
 import About from './compo/About';
 import Contact from './compo/Contact';
 import MyStud from './MyStud';
+import MyLanguage from './MyLanguage';
+import MyOffCanvas from './compo/MyOffCanvas';
 
 
 
@@ -29,7 +31,11 @@ function App() {
         <Contact/>
       </section> */}
 
-      <MyStud/>
+      {/* <MyStud/> */}
+
+      {/* <MyLanguage/> */}
+
+      <MyOffCanvas />
     </div>
   );
 }

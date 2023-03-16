@@ -40,15 +40,15 @@ function MyStud() {
     useEffect(() => {
         if (selClass == "A") {
             setfilterdList(stdList.filter((std) => std.marks >= 75))
-        }else if(selClass == "B"){
+        } else if (selClass == "B") {
             setfilterdList(stdList.filter((std) => std.marks >= 60 && std.marks < 75))
-        }else if(selClass == "C"){
+        } else if (selClass == "C") {
             setfilterdList(stdList.filter((std) => std.marks >= 50 && std.marks < 60))
-        }else if(selClass=="D"){
+        } else if (selClass == "D") {
             setfilterdList(stdList.filter((std) => std.marks >= 35 && std.marks < 50))
-        }else if(selClass=="E"){
+        } else if (selClass == "E") {
             setfilterdList(stdList.filter((std) => std.marks < 35))
-        }else{
+        } else {
             setfilterdList(stdList)
         }
     }, [selClass])
