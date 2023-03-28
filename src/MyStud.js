@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Col, Container, Form, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap'
+import MyModal from './compo/MyModal'
+import MyModalCompo from './compo/MyModalCompo'
 
 
 function MyStud() {
@@ -37,6 +39,16 @@ function MyStud() {
     const [selClass, setSelClass] = useState("All")
     const [filterdList, setfilterdList] = useState([])
 
+    const [show, setshow] = useState(false)
+
+    function onShow() {
+        setshow(true)
+    }
+
+    function onHide() {
+        setshow(false)
+    }
+
     useEffect(() => {
         if (selClass == "A") {
             setfilterdList(stdList.filter((std) => std.marks >= 75))
@@ -68,7 +80,7 @@ function MyStud() {
                 </Row>
                 <Row>
                     {
-                        filterdList.map((std) => {
+                        filterdList.map((std, idx) => {
                             return (
                                 <Col lg={4} md={3} sm={12}>
                                     <Card>
@@ -77,6 +89,9 @@ function MyStud() {
                                         <Card.Body>
                                             <h4>{std.marks}</h4>
                                         </Card.Body>
+                                        <Card.Footer>
+                                            <Button onClick={() => onShow()}>Details</Button>
+                                        </Card.Footer>
                                     </Card>
                                 </Col>
                             )
@@ -84,6 +99,7 @@ function MyStud() {
                     }
                 </Row>
             </Container>
+            <MyModalCompo show={show} hideKar={onHide}/>
         </div>
     )
 }

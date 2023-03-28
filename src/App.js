@@ -12,6 +12,7 @@ import Contact from './compo/Contact';
 import MyStud from './MyStud';
 import MyLanguage from './MyLanguage';
 import MyOffCanvas from './compo/MyOffCanvas';
+import ParentCompo from './compo/ParentCompo';
 
 
 
@@ -31,11 +32,14 @@ function App() {
         <Contact/>
       </section> */}
 
-      {/* <MyStud/> */}
+      <MyStud/>
 
       {/* <MyLanguage/> */}
 
-      <MyOffCanvas />
+      {/* <MyOffCanvas /> */}
+      {/* <MyRoutes /> */}
+      
+      {/* <ParentCompo/> */}
     </div>
   );
 }

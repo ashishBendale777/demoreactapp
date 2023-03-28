@@ -11,7 +11,7 @@ function MyRoutes() {
     return (
         <div>
             <BrowserRouter>
-                <MyOffCanvas/>
+                <MyNavBar/>
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/about' element={<About />} />
